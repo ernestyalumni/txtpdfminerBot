@@ -2,7 +2,7 @@
 *Bot that mines txt and pdfs*
 
 **Authors**:    
-*Back-end*  - Ernest Yeung <ernestyalumni at gmail dot com>, [@ernestyalumni](https://twitter.com/ernestyalumni)
+*Back-end*  - Ernest Yeung [ernestyalumni at gmail dot com], [@ernestyalumni](https://twitter.com/ernestyalumni)    
 *Front-end* - Kuhan Muniam     
 
 ## Features (updated June 21, 2017)
@@ -21,9 +21,13 @@
 
 ![Top 75 words](https://github.com/ernestyalumni/txtpdfminerBot/raw/master/images/Top75wordstweets2015Screenshot%20from%202017-06-21%2015-11-48.png)
 
+## (Original) features (cf. `./original/`)   
 
+- Parsed pdf and preprocessed ((data) cleaned/wrangled) data with Python `pdfminer`   
+- implemented TextRank by constructing a graph with Python library `networkx` and Python library `nltk` and its PageRank implementation
+- results are exported in `json` format to populate `json` fields for the myPolly.ai chat bot, named "Mayo."  Facebook Messenger interface was easily deployed with myPolly.ai browser API/interface.  
 
-## June 3rd, 2017 update; we won a prize for this chat bot at the [MyPolly.ai Botathon](https://www.meetup.com/AI-LA-Meetup/events/239292598/) in Los Angeles!
+## June 3rd, 2017 update; we won a prize for this chat bot at the [MyPolly.ai Botathon](https://www.meetup.com/AI-LA-Meetup/events/239292598/) in Los Angeles!  Thank you to the organizer, judges, and datalog.ai!  
 
 
 
