@@ -40,16 +40,29 @@ We won a prize in recognition of the technical process involved with the backend
 - [`./pagerank.h`](https://github.com/ernestyalumni/txtpdfminerBot/raw/master/pagerank.h)   
   * CUDA C/C++ header file for `./pagerank.cu`
 
+- [`./main_pagerank.cu`](https://github.com/ernestyalumni/txtpdfminerBot/raw/master/main_pagerank.cu)    
+  * "main file" that
+    1.  does *File I/O*, importing the text file with the matrix for use as a **COLUMN-MAJOR** matrix format and  
+    2.  runs the PageRank CUDA C++ function for dense matrices
 
+The 3 files above are the "meat" of the PageRank implementation in CUDA C/C++/CUBLAS.  
 
-- [`./ntlk_graphs_metrics.ipynb`]()
+- [`./ntlk_graphs_metrics.ipynb`](https://github.com/ernestyalumni/txtpdfminerBot/blob/master/ntlk_graphs_metrics.ipynb)
+  * jupyter notebook (Python) that steps through the construction of the graph for the example of `nltk`'s corpus for Twitter.    
+    
 
 ## Original version, `./original/`
 ### Big example  
 
-We had successfully parsed, preprocessed (data cleaned), and applied TextRank (`nltk`'s "`pagerank`" (Python) implementation) on a portion of this massive (nearly 2000 pages) reference manual:
+First, we showed an implementation of the TextRank algorithm for finding relevant keywords in a text (i.e. unsupervised learning) for a simple example, [`10.txt`](https://github.com/ernestyalumni/txtpdfminerBot/blob/master/original/10.txt)
+
+Then, we had successfully parsed, preprocessed (data cleaned), and applied TextRank (`nltk`'s "`pagerank`" (Python) implementation) on a portion of this massive (nearly 2000 pages) reference manual:
 
 http://www.ti.com/lit/ug/spnu562/spnu562.pdf   
+
+This was shown, step-by-step, in jupyter notebook (Python) [`TextSummarization_edited.ipynb`](https://github.com/ernestyalumni/txtpdfminerBot/blob/master/original/TextSummarization_edited.ipynb).  
+
+Note that for *graph construction* the **Levenshtein** metric between 2 strings was used.   
 
 ### `mypolly.ai` chat bot Front End
 
@@ -59,6 +72,6 @@ http://www.ti.com/lit/ug/spnu562/spnu562.pdf
 
 ## References
 
-ML.pdf
+I dive into the theory/mathematics behind the PageRank algorithm in the section for "Unsupervised Learning" in my notes on [Machine Learning](https://github.com/ernestyalumni/MLgrabbag/raw/mobile/LaTeXandpdfs/ML.pdf)
 
 
